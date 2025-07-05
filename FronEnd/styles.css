@@ -1,0 +1,1744 @@
+/* Walmart Color Variables */
+:root {
+    --walmart-blue: #0071ce;
+    --walmart-yellow: #ffc220;
+    --walmart-light-blue: #e6f1f9;
+    --walmart-dark-blue: #004c91;
+    --walmart-green: #76c043;
+    --walmart-light-green: #e8f5e0;
+    --text-dark: #2a2a2a;
+    --text-medium: #555555;
+    --text-light: #888888;
+    --bg-light: #f8f8f8;
+    --border-light: #e0e0e0;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--walmart-dark-blue);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--walmart-yellow);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--walmart-blue);
+    padding: 1rem 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    max-height: 25px;
+}
+
+.logo-text {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--walmart-yellow);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+.eco-rewards {
+    background-color: var(--walmart-yellow);
+    color: var(--text-dark) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+}
+
+.eco-rewards:hover {
+    background-color: #e6af1c;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1.5rem;
+    color: white;
+}
+
+.nav-icons a {
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.user-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user-status {
+    font-size: 0.8rem;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--walmart-yellow);
+    color: var(--text-dark);
+    font-size: 0.7rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/walmart.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    background-color: var(--walmart-yellow);
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #e6af1c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Page Banner (for inner pages) */
+.page-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/walmart.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+}
+
+.page-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.page-banner p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+}
+
+/* Features Section */
+.features {
+    padding: 4rem 4%;
+    background-color: var(--bg-light);
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    background-color: var(--walmart-light-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--walmart-blue);
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+    color: var(--walmart-dark-blue);
+}
+
+.feature-card p {
+    color: var(--text-medium);
+}
+
+/* Vision Section */
+.vision {
+    padding: 4rem 4%;
+}
+
+.vision-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.vision-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: var(--text-medium);
+}
+
+/* Discount Section */
+.discounts,
+.featured-products {
+    padding: 4rem 4%;
+}
+
+.filter-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    background-color: white;
+    border: 2px solid var(--border-light);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, 
+.filter-btn.active {
+    background-color: var(--walmart-blue);
+    color: white;
+    border-color: var(--walmart-blue);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--walmart-yellow);
+    color: var(--text-dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.expiry-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--text-dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.original-price {
+    color: var(--text-light);
+    text-decoration: line-through;
+    font-size: 0.9rem;
+}
+
+.discount-price {
+    font-weight: bold;
+    color: var(--walmart-blue);
+    font-size: 1.1rem;
+}
+
+.eco-impact {
+    margin-bottom: 1rem;
+}
+
+.eco-label {
+    background-color: var(--walmart-light-green);
+    color: var(--walmart-green);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.add-to-cart {
+    background-color: var(--walmart-blue);
+    color: white;
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: var(--walmart-dark-blue);
+}
+
+.view-more {
+    display: block;
+    margin: 2.5rem auto 0;
+    background-color: white;
+    color: var(--walmart-blue);
+    border: 2px solid var(--walmart-blue);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.view-more:hover {
+    background-color: var(--walmart-blue);
+    color: white;
+}
+
+/* Bottle Return System */
+.bottle-return {
+    padding: 4rem 4%;
+    background-color: var(--bg-light);
+}
+
+.bottle-return-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.steps {
+    counter-reset: step-counter;
+    margin-bottom: 2rem;
+}
+
+.steps li {
+    display: flex;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    background-color: var(--walmart-blue);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    margin-bottom: 0.3rem;
+    color: var(--walmart-dark-blue);
+}
+
+.impact-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.impact-stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--walmart-blue);
+    margin-bottom: 0.3rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+}
+
+.bottle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.bottle-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.bottle-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.bottle-info {
+    padding: 1rem;
+}
+
+.bottle-info h4 {
+    margin-bottom: 0.5rem;
+}
+
+.bottle-price {
+    margin-bottom: 1rem;
+}
+
+.bottle-price .price {
+    font-weight: bold;
+    color: var(--walmart-blue);
+}
+
+.bottle-price .refund {
+    color: var(--walmart-green);
+    font-size: 0.8rem;
+}
+
+/* Return Locations Section */
+.return-locations {
+    padding: 4rem 4%;
+}
+
+.locations-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.location-search {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.search-box {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.search-box input {
+    flex-grow: 1;
+    padding: 0.8rem;
+    border: 1px solid var(--border-light);
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-box button {
+    background-color: var(--walmart-blue);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0 5px 5px 0;
+    font-weight: 500;
+}
+
+.locations-map {
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Carbon Neutrality Dashboard */
+.carbon-dashboard {
+    padding: 4rem 4%;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.dashboard-header {
+    background-color: var(--walmart-blue);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-filter {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.time-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.time-btn:hover,
+.time-btn.active {
+    background-color: white;
+    color: var(--walmart-blue);
+}
+
+.dashboard-content {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.impact-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.metric-card {
+    background-color: var(--bg-light);
+    padding: 1.2rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.metric-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--walmart-light-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--walmart-blue);
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.metric-data h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    color: var(--text-medium);
+}
+
+.metric-value {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--text-dark);
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.metric-trend {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.metric-trend.positive {
+    color: var(--walmart-green);
+}
+
+.metric-trend.negative {
+    color: #e74c3c;
+}
+
+.eco-chart {
+    grid-column: span 2;
+    background-color: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.eco-chart h4 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.chart-placeholder {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-top: 2rem;
+    position: relative;
+}
+
+.chart-placeholder::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-light);
+}
+
+.chart-placeholder::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-light);
+}
+
+.chart-bars {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.chart-bar {
+    width: 50px;
+    background-color: var(--walmart-blue);
+    border-radius: 5px 5px 0 0;
+    position: relative;
+}
+
+.chart-bar::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: var(--text-medium);
+    white-space: nowrap;
+}
+
+.eco-achievements {
+    padding: 2rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.eco-achievements h4 {
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.badges {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.badge {
+    text-align: center;
+    position: relative;
+}
+
+.badge-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--walmart-light-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--walmart-blue);
+    margin: 0 auto 0.8rem;
+}
+
+.badge.locked .badge-icon {
+    background-color: var(--border-light);
+    color: var(--text-light);
+}
+
+.badge-name {
+    font-size: 0.9rem;
+    display: block;
+}
+
+.badge-lock {
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+}
+
+/* Impact History Section */
+.impact-history {
+    padding: 4rem 4%;
+    background-color: var(--bg-light);
+}
+
+.history-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.history-filters {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.history-type {
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-light);
+    font-size: 1rem;
+    outline: none;
+    background-color: white;
+    min-width: 250px;
+}
+
+.history-timeline {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.history-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 100%;
+    width: 2px;
+    background-color: var(--border-light);
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--walmart-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+}
+
+.timeline-content {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    flex-grow: 1;
+}
+
+.timeline-content h4 {
+    margin-bottom: 0.5rem;
+    color: var(--walmart-dark-blue);
+}
+
+.timeline-content p {
+    margin-bottom: 0.5rem;
+    color: var(--text-medium);
+}
+
+.timeline-date {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-right: 1rem;
+}
+
+.impact-value {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--walmart-green);
+    font-weight: 500;
+}
+
+/* Gamified Impact Hub */
+.gamified-hub {
+    padding: 4rem 4%;
+    background-color: var(--bg-light);
+}
+
+.rewards-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rewards-summary {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.rewards-points {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.points-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--walmart-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+}
+
+.points-value {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.points-label {
+    font-size: 0.9rem;
+}
+
+.level-progress {
+    max-width: 300px;
+}
+
+.level-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.current-level, .next-level {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: var(--bg-light);
+    border-radius: 50px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--walmart-blue);
+    border-radius: 50px;
+}
+
+.progress-text {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.rewards-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.rewards-btn {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.rewards-btn:hover {
+    background-color: var(--walmart-blue);
+    color: white;
+}
+
+.challenges h3 {
+    margin-bottom: 1.5rem;
+    color: var(--walmart-dark-blue);
+}
+
+.challenge-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.challenge-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.challenge-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.challenge-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--walmart-light-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--walmart-blue);
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.challenge-title {
+    flex-grow: 1;
+}
+
+.challenge-title h4 {
+    margin-bottom: 0.2rem;
+}
+
+.challenge-dates {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.challenge-points {
+    background-color: var(--walmart-yellow);
+    color: var(--text-dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.challenge-progress {
+    margin-bottom: 1rem;
+}
+
+.challenge-description {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+}
+
+/* Available Rewards Section */
+.available-rewards {
+    padding: 4rem 4%;
+}
+
+.rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reward-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.reward-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--walmart-light-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--walmart-blue);
+    margin: 0 auto 1.2rem;
+}
+
+.reward-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--walmart-dark-blue);
+}
+
+.reward-card p {
+    color: var(--text-medium);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    min-height: 40px;
+}
+
+.reward-cost {
+    margin-bottom: 1.2rem;
+    font-weight: bold;
+    color: var(--walmart-blue);
+}
+
+.redeem-btn {
+    background-color: var(--walmart-yellow);
+    color: var(--text-dark);
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.redeem-btn:hover {
+    background-color: #e6af1c;
+}
+
+.redeem-btn.disabled {
+    background-color: var(--border-light);
+    color: var(--text-light);
+    cursor: not-allowed;
+}
+
+.reward-card.locked {
+    opacity: 0.8;
+}
+
+.lock-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.lock-overlay i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* How to Earn Points Section */
+.earn-points {
+    padding: 4rem 4%;
+    background-color: var(--bg-light);
+}
+
+.earn-points-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.earn-method {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.earn-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--walmart-light-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--walmart-blue);
+    margin: 0 auto 1.2rem;
+}
+
+.earn-method h3 {
+    margin-bottom: 0.8rem;
+    color: var(--walmart-dark-blue);
+}
+
+.earn-method p {
+    color: var(--text-medium);
+}
+
+/* Next Steps Section */
+.next-steps {
+    padding: 4rem 4%;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--walmart-light-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--walmart-blue);
+    margin: 0 auto 1.5rem;
+}
+
+.step-card h3 {
+    margin-bottom: 1rem;
+    color: var(--walmart-dark-blue);
+}
+
+.step-card p {
+    margin-bottom: 1.5rem;
+    color: var(--text-medium);
+}
+
+.app-buttons {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.app-btn {
+    background-color: var(--text-dark);
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.app-btn:hover {
+    background-color: black;
+}
+
+.find-store, .learn-more {
+    background-color: var(--walmart-blue);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.find-store:hover, .learn-more:hover {
+    background-color: var(--walmart-dark-blue);
+}
+
+/* Footer */
+footer {
+    background-color: var(--walmart-blue);
+    color: white;
+    padding-top: 3rem;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4% 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+    max-width: 250px;
+}
+
+.footer-logo img {
+    max-width: 130px;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.link-group h4 {
+    margin-bottom: 1.2rem;
+    color: var(--walmart-yellow);
+}
+
+.link-group ul li {
+    margin-bottom: 0.8rem;
+}
+
+.link-group ul li a {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.link-group ul li a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    padding: 2rem 4%;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.legal {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.legal a {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.legal a:hover {
+    opacity: 1;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+/* Cart Modal */
+.cart-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.cart-modal.show {
+    display: flex;
+}
+
+.cart-modal-content {
+    position: relative;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.cart-items-container {
+    margin-top: 1.5rem;
+}
+
+.cart-items {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-name {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.cart-item-price {
+    color: var(--walmart-blue);
+    font-weight: bold;
+}
+
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-btn {
+    width: 24px;
+    height: 24px;
+    background-color: var(--bg-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.quantity-btn:hover {
+    background-color: var(--border-light);
+}
+
+.cart-quantity {
+    font-weight: 500;
+}
+
+.remove-item {
+    color: #e74c3c;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.remove-item:hover {
+    opacity: 0.8;
+}
+
+.cart-summary {
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.checkout-btn {
+    width: 100%;
+    background-color: var(--walmart-blue);
+    color: white;
+    padding: 0.8rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: var(--walmart-dark-blue);
+}
+
+.close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.close-cart:hover {
+    opacity: 0.7;
+}
+
+.empty-cart-message {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--text-light);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    nav ul {
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .locations-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    nav ul {
+        justify-content: space-between;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .rewards-summary {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .rewards-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .eco-chart {
+        grid-column: span 1;
+    }
+    
+    .bottle-return-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-container {
+        width: 150px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    nav ul li {
+        margin-right: 0.5rem;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .footer-links {
+        gap: 2rem;
+    }
+
+    .link-group {
+        min-width: 120px;
+    }
+
+    .legal {
+        gap: 1rem;
+    }
+    
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .cart-item-actions {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 0.8rem;
+    }
+}

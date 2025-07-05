@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Dashboard - Walmart Eco-Conscious Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Walmart Logo -->
+    <header>
+        <div class="logo-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Walmart_spark_%282025%29.svg/800px-Walmart_spark_%282025%29.svg.png" 
+                 alt="Walmart Logo" class="logo">
+            <span class="logo-text">Walmart</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="eco-products.html">Eco-Products</a></li>
+                <li><a href="bottle-return.html">Bottle Return</a></li>
+                <li><a href="impact-dashboard.html" class="active">Impact Dashboard</a></li>
+                <li><a href="eco-rewards.html" class="eco-rewards">Eco Rewards</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="#" class="user-icon">
+                <i class="fas fa-user"></i>
+                <span class="user-status">DakshVerma11</span>
+            </a>
+            <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>Your Sustainability Impact</h1>
+            <p>Track your contribution to environmental conservation in real-time</p>
+        </div>
+    </section>
+
+    <!-- Carbon Neutrality Dashboard -->
+    <section class="carbon-dashboard" id="carbon-dashboard">
+        <h2 class="section-title">Carbon Neutrality Dashboard</h2>
+        <div class="dashboard-container">
+            <div class="dashboard-header">
+                <h3>Your Environmental Impact</h3>
+                <div class="time-filter">
+                    <button class="time-btn active">Month</button>
+                    <button class="time-btn">Quarter</button>
+                    <button class="time-btn">Year</button>
+                </div>
+            </div>
+            <div class="dashboard-content">
+                <div class="impact-metrics">
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-globe-americas"></i></div>
+                        <div class="metric-data">
+                            <h4>CO₂ Saved</h4>
+                            <span class="metric-value">24.8 kg</span>
+                            <span class="metric-trend positive">+12% <i class="fas fa-arrow-up"></i></span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-wine-bottle"></i></div>
+                        <div class="metric-data">
+                            <h4>Bottles Returned</h4>
+                            <span class="metric-value">18</span>
+                            <span class="metric-trend positive">+5 <i class="fas fa-arrow-up"></i></span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-apple-alt"></i></div>
+                        <div class="metric-data">
+                            <h4>Food Waste Prevented</h4>
+                            <span class="metric-value">7.2 kg</span>
+                            <span class="metric-trend positive">+20% <i class="fas fa-arrow-up"></i></span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-tint"></i></div>
+                        <div class="metric-data">
+                            <h4>Water Saved</h4>
+                            <span class="metric-value">156 L</span>
+                            <span class="metric-trend positive">+8% <i class="fas fa-arrow-up"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="eco-chart">
+                    <h4>Your Monthly Impact</h4>
+                    <div class="chart-placeholder">
+                        <!-- This would be a chart in a real implementation -->
+                        <div class="chart-bars">
+                            <div class="chart-bar" style="height: 40%;" data-label="Week 1"></div>
+                            <div class="chart-bar" style="height: 65%;" data-label="Week 2"></div>
+                            <div class="chart-bar" style="height: 55%;" data-label="Week 3"></div>
+                            <div class="chart-bar" style="height: 80%;" data-label="Week 4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eco-achievements">
+                <h4>Your Eco Achievements</h4>
+                <div class="badges">
+                    <div class="badge">
+                        <div class="badge-icon"><i class="fas fa-seedling"></i></div>
+                        <span class="badge-name">Earth Protector</span>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-icon"><i class="fas fa-recycle"></i></div>
+                        <span class="badge-name">Recycling Champion</span>
+                    </div>
+                    <div class="badge locked">
+                        <div class="badge-icon"><i class="fas fa-leaf"></i></div>
+                        <span class="badge-name">Zero Waste Hero</span>
+                        <span class="badge-lock"><i class="fas fa-lock"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact History -->
+    <section class="impact-history">
+        <h2 class="section-title">Your Sustainability Journey</h2>
+        <div class="history-container">
+            <div class="history-filters">
+                <select class="history-type">
+                    <option value="all">All Activities</option>
+                    <option value="bottles">Bottle Returns</option>
+                    <option value="purchases">Eco Purchases</option>
+                    <option value="rewards">Rewards Earned</option>
+                </select>
+            </div>
+            <div class="history-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-shopping-bag"></i></div>
+                    <div class="timeline-content">
+                        <h4>Near-Expiry Purchase</h4>
+                        <p>Purchased 3 items with expiry discounts</p>
+                        <span class="timeline-date">July 2, 2025</span>
+                        <span class="impact-value">Saved: 2.5kg CO₂</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-wine-bottle"></i></div>
+                    <div class="timeline-content">
+                        <h4>Bottle Return</h4>
+                        <p>Returned 5 glass bottles</p>
+                        <span class="timeline-date">June 28, 2025</span>
+                        <span class="impact-value">Saved: 1.2kg CO₂</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-award"></i></div>
+                    <div class="timeline-content">
+                        <h4>Badge Earned</h4>
+                        <p>Earned "Recycling Champion" badge</p>
+                        <span class="timeline-date">June 25, 2025</span>
+                        <span class="impact-value">+50 EcoPoints</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-shopping-bag"></i></div>
+                    <div class="timeline-content">
+                        <h4>Near-Expiry Purchase</h4>
+                        <p>Purchased 2 dairy items with expiry discounts</p>
+                        <span class="timeline-date">June 20, 2025</span>
+                        <span class="impact-value">Saved: 1.8kg CO₂</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Walmart_spark_%282025%29.svg/800px-Walmart_spark_%282025%29.svg.png" alt="Walmart Logo">
+                <p>Retail with Purpose: Eco-Conscious Platform</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="eco-products.html">Eco Deals</a></li>
+                        <li><a href="bottle-return.html">Glass Bottle Products</a></li>
+                        <li><a href="#">Sustainable Brands</a></li>
+                        <li><a href="#">Local Produce</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>Eco Program</h4>
+                    <ul>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="bottle-return.html">Bottle Return Locations</a></li>
+                        <li><a href="eco-rewards.html">Rewards Program</a></li>
+                        <li><a href="#">Sustainability Goals</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="index.html#vision">Our Mission</a></li>
+                        <li><a href="impact-dashboard.html">Environmental Impact</a></li>
+                        <li><a href="#">Community Projects</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Accessibility</a>
+                <a href="#">California Supply Chain Act</a>
+            </div>
+            <p class="copyright">© 2025 Walmart. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal with Enhanced Functionality -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div class="cart-items-container">
+                <ul class="cart-items"></ul>
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span class="total-amount">$0.00</span>
+                    </div>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walmart Eco-Conscious Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Walmart Logo -->
+    <header>
+        <div class="logo-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Walmart_spark_%282025%29.svg/800px-Walmart_spark_%282025%29.svg.png" 
+                 alt="Walmart Logo" class="logo">
+            <span class="logo-text">Walmart</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="eco-products.html">Eco-Products</a></li>
+                <li><a href="bottle-return.html">Bottle Return</a></li>
+                <li><a href="impact-dashboard.html">Impact Dashboard</a></li>
+                <li><a href="eco-rewards.html" class="eco-rewards">Eco Rewards</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="#" class="user-icon">
+                <i class="fas fa-user"></i>
+                <span class="user-status">DakshVerma11</span>
+            </a>
+            <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Retail with Purpose</h1>
+            <h2>Shop Sustainably, Save More</h2>
+            <p>Join Walmart's eco-conscious initiative to reduce waste and protect our planet</p>
+            <button class="cta-button" onclick="window.location.href='eco-products.html'">Shop Eco Deals</button>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="features" id="features">
+        <h2 class="section-title">Our Eco-Conscious Features</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-tags"></i></div>
+                <h3>Dynamic Discounting</h3>
+                <p>Products automatically discounted as they approach expiry dates</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-recycle"></i></div>
+                <h3>Circular Glass Ecosystem</h3>
+                <p>Return glass bottles for refunds and help reduce plastic waste</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                <h3>Carbon Neutrality</h3>
+                <p>Track your shopping's environmental impact in real-time</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-trophy"></i></div>
+                <h3>Gamified Impact</h3>
+                <p>Earn rewards and track your contribution to sustainability</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Vision Section -->
+    <section class="vision" id="vision">
+        <h2 class="section-title">Our Vision</h2>
+        <div class="vision-content">
+            <p>We shall create a system where food products are automatically discounted as they reach their expiry date, encouraging shoppers to reduce food waste. Additionally, beverages will be sold in glass bottles at a higher price (e.g., water at ₹70). When customers return the empty bottle, they receive a ₹50 refund, promoting a circular economy.</p>
+            <p>Dynamic Discounting Engine: Use IoT shelf sensors (e.g., Siemens SIMATIC) to monitor perishable products. Apply escalating discounts (10% → 70%) as expiry approaches. Push notifications alert app users with offers like: "Salmon: 30% off, expires in 24h!"</p>
+            <p>Real-World Reference: Walmart's GenAI flags near-expiry items for markdowns/donations (Walmart Global Tech). Tech Stack: Azure IoT Edge + PySpark for data processing and real-time analytics.</p>
+        </div>
+    </section>
+
+    <!-- Featured Products Section (Preview of Eco-Products) -->
+    <section class="featured-products" id="featured-products">
+        <h2 class="section-title">Featured Eco Deals</h2>
+        <div class="products-grid">
+            <div class="product-card" data-category="produce">
+                <div class="discount-badge">50% OFF</div>
+                <div class="expiry-badge">Expires in 24h</div>
+                <img src="/images/apple.webp" alt="Organic Apples">
+                <div class="product-info">
+                    <h3>Organic Apples</h3>
+                    <div class="price">
+                        <span class="original-price">$4.99</span>
+                        <span class="discount-price">$2.49</span>
+                    </div>
+                    <div class="eco-impact">
+                        <span class="eco-label">Saved: 0.8kg CO₂</span>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="dairy">
+                <div class="discount-badge">30% OFF</div>
+                <div class="expiry-badge">Expires in 48h</div>
+                <img src="/images/milk.jpg" alt="Organic Milk">
+                <div class="product-info">
+                    <h3>Organic Milk</h3>
+                    <div class="price">
+                        <span class="original-price">$3.99</span>
+                        <span class="discount-price">$2.79</span>
+                    </div>
+                    <div class="eco-impact">
+                        <span class="eco-label">Saved: 0.5kg CO₂</span>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="bakery">
+                <div class="discount-badge">40% OFF</div>
+                <div class="expiry-badge">Expires in 24h</div>
+                <img src="/images/bread.webp" alt="Artisan Bread">
+                <div class="product-info">
+                    <h3>Artisan Bread</h3>
+                    <div class="price">
+                        <span class="original-price">$5.99</span>
+                        <span class="discount-price">$3.59</span>
+                    </div>
+                    <div class="eco-impact">
+                        <span class="eco-label">Saved: 0.6kg CO₂</span>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="meat">
+                <div class="discount-badge">25% OFF</div>
+                <div class="expiry-badge">Expires in 36h</div>
+                <img src="/images/salmon.jpg" alt="Fresh Salmon">
+                <div class="product-info">
+                    <h3>Fresh Salmon</h3>
+                    <div class="price">
+                        <span class="original-price">$12.99</span>
+                        <span class="discount-price">$9.74</span>
+                    </div>
+                    <div class="eco-impact">
+                        <span class="eco-label">Saved: 1.2kg CO₂</span>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <button class="view-more" onclick="window.location.href='eco-products.html'">View All Products</button>
+    </section>
+
+    <!-- Next Steps Section -->
+    <section class="next-steps" id="next-steps">
+        <h2 class="section-title">Join the Eco-Conscious Movement</h2>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3>Download the App</h3>
+                <p>Get personalized eco-alerts and track your sustainability journey</p>
+                <div class="app-buttons">
+                    <button class="app-btn"><i class="fab fa-apple"></i> App Store</button>
+                    <button class="app-btn"><i class="fab fa-google-play"></i> Google Play</button>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-icon"><i class="fas fa-store"></i></div>
+                <h3>Visit a Store</h3>
+                <p>Find a participating Walmart location near you</p>
+                <button class="find-store">Find Stores</button>
+            </div>
+            <div class="step-card">
+                <div class="step-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                <h3>Community Impact</h3>
+                <p>See how your sustainable choices help local communities</p>
+                <button class="learn-more">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Walmart_spark_%282025%29.svg/800px-Walmart_spark_%282025%29.svg.png" alt="Walmart Logo">
+                <p>Retail with Purpose: Eco-Conscious Platform</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="eco-products.html">Eco Deals</a></li>
+                        <li><a href="bottle-return.html">Glass Bottle Products</a></li>
+                        <li><a href="#">Sustainable Brands</a></li>
+                        <li><a href="#">Local Produce</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>Eco Program</h4>
+                    <ul>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="bottle-return.html">Bottle Return Locations</a></li>
+                        <li><a href="eco-rewards.html">Rewards Program</a></li>
+                        <li><a href="#">Sustainability Goals</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#vision">Our Mission</a></li>
+                        <li><a href="impact-dashboard.html">Environmental Impact</a></li>
+                        <li><a href="#">Community Projects</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Accessibility</a>
+                <a href="#">California Supply Chain Act</a>
+            </div>
+            <p class="copyright">© 2025 Walmart. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal with Enhanced Functionality -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div class="cart-items-container">
+                <ul class="cart-items"></ul>
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span class="total-amount">$0.00</span>
+                    </div>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
