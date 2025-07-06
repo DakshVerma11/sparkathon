@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bottle Return - Walmart Eco-Conscious Platform</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="bottle.css">
 </head>
+
 <body>
     <!-- Header with Walmart Logo -->
     <header>
         <div class="logo-container">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Walmart_spark_%282025%29.svg/800px-Walmart_spark_%282025%29.svg.png" 
-                 alt="Walmart Logo" class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Walmart_spark_%282025%29.svg/800px-Walmart_spark_%282025%29.svg.png"
+                alt="Walmart Logo" class="logo">
             <span class="logo-text">Walmart</span>
         </div>
         <nav>
@@ -33,6 +36,133 @@
             <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
         </div>
     </header>
+
+
+    <div class="bottle-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">♻️ EcoDeposit</div>
+            <nav>
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">My Bottles</a>
+                <a href="#">Rewards</a>
+                <a href="#">Impact</a>
+                <a href="#">Support</a>
+
+            </nav>
+        </aside>
+
+
+
+        <main class="main">
+            <header class="topbar">
+                <h1>Circular Glass Ecosystem</h1>
+
+            </header>
+
+            <section class="cards">
+                <div class="card glass">
+                    <h2 id="walletAmount">₹150</h2>
+                    <p>Wallet Balance</p>
+                </div>
+                <div class="card glass">
+                    <h2 id="ecoPoints">1,200</h2>
+                    <p>Eco Points</p>
+                </div>
+                <div class="card glass">
+                    <h2 id="tierName">Silver Saver</h2>
+                    <p>Your Tier</p>
+                </div>
+            </section>
+
+            <section class="stats">
+                <div class="stat glass">
+                    <div class="icon">🚰</div>
+                    <div>
+                        <h3 id="bottleCount">7</h3>
+                        <p>Bottles Returned</p>
+                    </div>
+                </div>
+                <div class="stat glass">
+                    <div class="icon">🌍</div>
+                    <div>
+                        <h3 id="co2Saved">1.50 kg</h3>
+                        <p>CO₂ Saved</p>
+                    </div>
+                </div>
+                <div class="stat glass">
+                    <div class="icon">🏆</div>
+                    <div>
+                        <h3 id="badgesLeft">3</h3>
+                        <p>To Next Badge</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="activity">
+                <h2>Your Bottle Activity</h2>
+                <input type="text" id="searchInput" placeholder="Search by ID or Date…" />
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>ID</th>
+                            <th>Status</th>
+                            <th>Refund</th>
+                            <th>CO₂</th>
+                        </tr>
+                    </thead>
+                    <tbody id="activityTable">
+                        <tr>
+                            <td>03/07/2025</td>
+                            <td>#BXL903</td>
+                            <td>Returned</td>
+                            <td>₹50</td>
+                            <td>0.24 kg</td>
+                        </tr>
+                        <tr>
+                            <td>28/06/2025</td>
+                            <td>#BXL785</td>
+                            <td>Returned</td>
+                            <td>₹50</td>
+                            <td>0.23 kg</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="controls">
+                <button id="scanBtn">Scan Bottle</button>
+                <div class="log glass" id="scanLog"></div>
+                <button id="chainBtn">Show Blockchain</button>
+                <div class="log glass" id="chainLog"></div>
+            </section>
+
+            <section class="progress glass">
+                <h2>Progress</h2>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <p><span id="badgeProgress">7</span> / 10 bottles</p>
+            </section>
+
+
+
+
+        </main>
+        <div id="toast" class="toast"></div>
+        <div id="badgeModal" class="modal">
+            <div class="modal-content">
+                <h2>🎉 Badge Unlocked!</h2>
+                <p>Congratulations, you’re now a Gold Eco‑Hero!</p>
+                <button id="closeModal">Close</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
 
     <!-- Page Banner -->
     <section class="page-banner">
@@ -143,7 +273,10 @@
                 </div>
             </div>
             <div class="locations-map">
-                <img src="images/maps.png" alt="Locations Map" class="map-placeholder">
+                <iframe title="Nearby Kiosks" width="100%" height="400" frameborder="0"
+                    style="border:0; border-radius:1rem;"
+                    src="https://maps.google.com/maps?q=recycling+kiosk+near+me&output=embed" allowfullscreen>
+                </iframe>
             </div>
         </div>
     </section>
@@ -152,7 +285,8 @@
     <footer>
         <div class="footer-top">
             <div class="footer-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Walmart_spark_%282025%29.svg/800px-Walmart_spark_%282025%29.svg.png" alt="Walmart Logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Walmart_spark_%282025%29.svg/800px-Walmart_spark_%282025%29.svg.png"
+                    alt="Walmart Logo">
                 <p>Retail with Purpose: Eco-Conscious Platform</p>
             </div>
             <div class="footer-links">
@@ -231,5 +365,7 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="bottleScript.js"></script>
 </body>
+
 </html>
